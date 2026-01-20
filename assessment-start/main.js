@@ -14,12 +14,10 @@ const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const insertY = ["the soup kitchen", "Disneyland", "the White House"];
 const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
 
-
 //3
 randomize.addEventListener('click', result);
 
 function result() {
-
     let newStory = storyText;
     const xItem = randomValueFromArray(insertX);
     const yItem = randomValueFromArray(insertY);
@@ -37,12 +35,11 @@ function result() {
     if(document.getElementById("uk").checked) {
         const weight = `${Math.round(300 / 14)} stone`;
         const temperature =  `${Math.round((94 - 32) / 1.8)} centigrade`;
-
         newStory = newStory.replaceAll("94 fahrenheit", temperature);
         newStory = newStory.replaceAll("300 pounds", weight);
     }
 
     story.textContent = newStory;
     story.style.visibility = 'visible';
-    }
+}
 
