@@ -16,7 +16,7 @@ myArray.forEach((element, index) => {
   const newElement = `${element} (${index})`;
   myArray[index] = newElement;
 });
-const myString = newArray.join(" - ");
+const myString = myArray.join(" - ");
 
 // 以下のコードは編集しないでください。
 
