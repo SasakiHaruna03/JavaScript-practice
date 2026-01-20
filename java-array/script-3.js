@@ -10,6 +10,13 @@ const myArray = [
 ];
 
 // ここにコードを追加
+myArray.pop();
+myArray.push("Jon", "Rin");
+myArray.forEach((element, index) => {
+  const newElement = `${element} (${index})`;
+  myArray[index] = newElement;
+});
+const myString = newArray.join(" - ");
 
 // 以下のコードは編集しないでください。
 

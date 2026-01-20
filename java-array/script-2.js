@@ -1,6 +1,9 @@
 const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
 
 // ここにコードを追加
+const myArray = myString.split("+");
+const arrayLength = myArray.length;
+const lastItem = myArray[myArray.length - 1];
 
 // 以下のコードは編集しないでください。
 
