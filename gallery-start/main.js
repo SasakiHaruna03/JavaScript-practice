@@ -6,6 +6,8 @@ const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
 const images = ['pic1.jpg', 'pic2.jpg','pic3.jpg','pic4.jpg','pic5.jpg'];
+
+/* Declaring the alternative text for each image file */
 const alts = {
     'pic1.jpg' : 'Closeup of a human eye',
     'pic2.jpg' : 'Rock that looks like a wave',
@@ -14,15 +16,12 @@ const alts = {
     'pic5.jpg' : 'Large moth on a leaf'
 }
 
-/* Declaring the alternative text for each image file */
-
 /* Looping through images */
 for (const image of images) {
     const newImage = document.createElement('img');
     newImage.setAttribute('src', `images/${image}`);
     newImage.setAttribute('alt', alts[image]);
     thumbBar.appendChild(newImage);
-
     newImage.addEventListener("click", e => {
         displayedImage.src = e.target.src;
         displayedImage.alt = e.target.src;
@@ -31,7 +30,6 @@ for (const image of images) {
 
 /* Wiring up the Darken/Lighten button */
 btn.addEventListener("click",() => {
-
     const btnClass = btn.getAttribute("class");
     if(btnClass === "dark") {
         btn.setAttribute("class", "light");
@@ -42,5 +40,4 @@ btn.addEventListener("click",() => {
         btn.textContent = "Darken";
         overlay.style.backgroundColor = "rgb(0 0 0 / 0%)";
     }
-
 });
