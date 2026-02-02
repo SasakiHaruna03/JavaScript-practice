@@ -1,0 +1,84 @@
+<head>
+    <style>
+        body {
+        font: 1.1em / 1.5 system-ui;
+        width: clamp(480px, 90%, 1200px);
+        margin: 0 auto;
+        }
+
+        h1 {
+        font-size: 1.5em;
+        }
+
+        h2 {
+        font-size: 1.3em;
+        }
+
+        form div {
+        display: flex;
+        width: 100%;
+        max-width: 500px;
+        align-items: center;
+        margin-bottom: 20px;
+        }
+
+        label[for],
+        select {
+        flex: 1;
+        }
+
+        #output {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 50px;
+        }
+
+        #output article {
+        padding: 0 20px;
+        background-color: #efefef;
+        border: 2px solid #cccccc;
+        border-radius: 10px;
+        }
+
+        #output ul {
+        list-style-type: none;
+        padding-left: 0;
+        }
+    </style>
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <h1>House search</h1>
+    <p>
+    Search for houses for sale. You can filter your search by street, number of
+    bedrooms, and number of bathrooms, or just submit the search with no filters
+    to display all available properties.
+    </p>
+    <form>
+    <div>
+        <label for="choose-street">Street:</label>
+        <select id="choose-street" name="choose-street">
+        <option value="">No street selected</option>
+        </select>
+    </div>
+    <div>
+        <label for="choose-bedrooms">Number of bedrooms:</label>
+        <select id="choose-bedrooms" name="choose-bedrooms">
+        <option value="">Any number of bedrooms</option>
+        </select>
+    </div>
+    <div>
+        <label for="choose-bathrooms">Number of bathrooms:</label>
+        <select id="choose-bathrooms" name="choose-bathrooms">
+        <option value="">Any number of bathrooms</option>
+        </select>
+    </div>
+    <div>
+        <button>Search for houses</button>
+    </div>
+    </form>
+    <p id="result-count">Results returned: 0</p>
+    <section id="output"></section>
+</body>
