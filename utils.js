@@ -1,5 +1,10 @@
 //関数ライブラリ
 
+// 数値かどうかを判定するヘルパー関数
+function isValidNumber(value) {
+    return typeof value === 'number' && !isNaN(value);
+}
+
 // 1. 平方根を求める関数
 export function getSquareRoot(num) {
     if (!isValidNumber(num) || num < 0) {
